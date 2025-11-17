@@ -11,8 +11,8 @@ body{
 /* header */
 .nav-menu{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-right: clamp(2rem, 10vw, 10rem);
 }
 .nav-menu_logo{
     font-size: 33px;
@@ -25,7 +25,8 @@ body{
     align-items: center;
     gap: 3rem;
     padding: 3rem;
-    padding-right: 19rem;
+    margin-left: auto;
+    
 
 }
 .nav-menu_firstMenu li{
@@ -52,8 +53,6 @@ body{
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
-    margin-right: 20rem;
-
 }
 .section_info-title{
     display: flex;
@@ -87,9 +86,9 @@ body{
     margin: 0 16rem;
 }
 .section_info-title div h1{
-    font-size: 42px;
-    width: 800px;
-    
+    font-size: clamp(28px, 5vw, 42px);
+    width: auto;
+     max-width: 800px;
 
 }
 
@@ -98,10 +97,12 @@ body{
     
 }
 .section_info-img{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     background-color: #534686;
-    width: 100%;
     padding-bottom: 2rem;
     margin: 0 auto;
     border-radius: 100px 100px 4rem 4rem;
@@ -123,11 +124,7 @@ body{
     cursor: pointer;
 
 }
-.section_info-img{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+
 /* section 2 */
 .section_img_description{
     display: flex;
@@ -228,13 +225,15 @@ body{
 }
 .grid_img{
     display: grid;
-    grid-template-columns: 600px 400px ;
+    grid-template-columns: repeat(2, 1fr); /* Вместо 600px 400px */
+    gap: 4rem;
     justify-content: center;
-
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .grid_img div{
     height: 400px;
-    width: 300px;
+    width: 100%;
     position: relative;
 
     
@@ -249,7 +248,7 @@ body{
 }
 .grid_img div img{
     position: absolute;
-    width: 500px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
@@ -468,3 +467,4 @@ font-size: 16px;
     position: absolute;
     right: 20px;
 }
+

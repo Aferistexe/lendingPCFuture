@@ -10,14 +10,15 @@
     <div class="glowing-circle"></div>
     <main>
         <header>
-            <nav class="nav-menu">
+            <nav  class="nav-menu" >
                 <p class="nav-menu_logo">Light</p>
-                <ul class="nav-menu_firstMenu">
+                <ul class="nav-menu_firstMenu" id="menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#Company">Company</a></li>
                     <li><a href="#Features">Features</a></li>
                 </ul>
-                <button class="nav-menu_button" type="button">Sign up</button>
+                <button class="nav-menu_button" type="button" id="openModal1">Contact us</button>
+                <button class="hamburger" id="hamburger" type="button">☰</button>
             </nav>
         </header>
         <article>
@@ -34,10 +35,8 @@
                         </p>
                     </div>
                     <div class="section_info-title_button">
-                        <button  class="section_info-1button" type="button">
-                            Get it Now
-                        </button>
-                        <a style="background-color: rgba(245, 222, 179, 0);" class="section_info-1button1" href="#">Explore Device</a>
+                        <button  class="section_info-1button" type="button" id="openModal2">Get it Now</button>
+                        <a  class="section_info-1button1" href="#">Explore Device</a>
                     </div>
                 </div>
                 <div class="section_info-img">
@@ -58,7 +57,7 @@
                 <div class="section_img_description-text">
                     <h2>New Experience In Playing Game</h2>
                     <p>You can try playing the game with a new style and of course a more real feel, like you are the main character in your game and adventure in this new digital world.</p>
-                    <button type="button">Get it Now</button>
+                    <button class="section_img_description-text_button" type="button" id="openModal3">Get it Now</button>
                     <div class="glowing-circle-end"></div>
                 </div>
             </section>
@@ -72,28 +71,28 @@
         <article>
             <section class="section_grid" >
                 <div class="grid_img">
-                    <div>
+                    <div class="grid_img_img">
                         <img src="src/img/article grid/img1.jpg" alt="">
                         <div>
                             <h3>Metaverse</h3>
                             <p>A Network of 3D virtual worlds focused on social connection. </p>
                         </div>
                     </div>                    
-                    <div>
+                    <div class="grid_img_img">
                         <img src="src/img/article grid/img2.jpg" alt="">
                         <div>
                             <h3>AIoT</h3>
                             <p>AI and IoT are both emerging innovative technologies with a lot of potentials. </p>
                         </div>
                     </div>                    
-                    <div>
+                    <div class="grid_img_img">
                         <img src="src/img/article grid/img3.jpeg" alt="">
                         <div>
                             <h3>HoloLens</h3>
                             <p>HoloLens display information, blend with the real world , or even simulate a virtual world. </p>
                         </div>
                     </div>                    
-                    <div>
+                    <div class="grid_img_img">
                         <img src="src/img/article grid/img4.jpg" alt="">
                         <div>
                             <h3>TPCASTT</h3>
@@ -182,7 +181,31 @@
             </div>
             <div class="glowing-circle-es"></div>
         </section>
+        <section class="section-modal" id="modal">
+            <div class="section-modal_items">
+                <p>Contact us</p>
+                <form action="">
+                    <div class="">
+                        <label for="User">Name</label>
+                        <input type="text" name="User" id="UserName" placeholder="Enter your name">
+                    </div>
+                    <div class="">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" id="UserEmail" placeholder="Enter your email address">
+                    </div>
+                    <div class="">
+                        <label for="tel">Number phone</label>
+                        <input type="tel" name="tel" id="UserTel" placeholder="Enter your phone number">
+                    </div>
+                </form>
+                <div>
+                    <button  type="button" id="closeModal">Back</button>
+                    <button  type="submit">Send</button>
+                </div>
+            </div>
+        </section>
     </main>
-    
+<script src="script.js"></script>    
 </body>
+
 </html>
